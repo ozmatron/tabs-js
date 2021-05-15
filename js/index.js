@@ -1,10 +1,3 @@
-function setActiveTab(tabId, buttonId) {
-  // Set Active Tab onload
-  var tab = document.getElementById(tabId);
-  tab.style.display = "block";
-  document.getElementById(buttonId).className += " active";
-}
-
 function switchTab(tabId, buttonId) {
   // Reset all tabs
   inActiveTabs = document.getElementsByClassName("tabContent");
