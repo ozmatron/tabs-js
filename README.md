@@ -6,4 +6,4 @@ Sample project of setting up Karma to run Mocha tests, also using Chai for asser
 
 Clone this repo then run
 
-`$ npm test`
+`$ npm test`# tabs-js
