@@ -3,14 +3,15 @@
 <head>
   <title>Tabs Project</title>
   <script src="js/index.js"></script>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body>
+<body onload="setActiveTab('tab1', 'btn1')">
     
-<div class="tab">
-  <button class="tabBtns" id="btn" onclick="switchTab('tab1')">Tab 1</button>
-  <button class="tabBtns" id="btn" onclick="switchTab('tab2')">Tab 2</button>
-  <button class="tabBtns" id="btn" onclick="switchTab('tab3')">Tab 3</button>
+<div class="tab" id="tabContainer">
+  <button class="tabBtns" id="btn1" onclick="switchTab('tab1', 'btn1')">Tab 1</button>
+  <button class="tabBtns" id="btn2" onclick="switchTab('tab2', 'btn2')">Tab 2</button>
+  <button class="tabBtns" id="btn3" onclick="switchTab('tab3', 'btn3')">Tab 3</button>
 </div>
 
 <div id="tab1" class="tabContent">
