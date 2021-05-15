@@ -1,14 +1,14 @@
 {
-  "name": "karma-mocha-example",
+  "name": "tabs-js-project",
   "version": "1.0.0",
-  "description": "Example of setting up test automatation using Karma and Mocha",
+  "description": "Vanilla JS tabs project",
   "keywords": [
     "javascript",
     "karma",
     "mocha",
     "automation"
   ],
-  "author": "Jaz White",
+  "author": "Oz Flanagan",
   "scripts": {
     "test": "karma start karma.conf.js"
   },
