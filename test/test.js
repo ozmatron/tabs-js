@@ -1,23 +1,35 @@
-describe('helloWorld()', function(){
-    it('should return "Hello world"', function(){
-        expect( helloWorld() ).to.be.equal( 'Hello world' );
+describe('switchTab()', function(){
+        beforeEach(function(){
+        document.querySelector('body').innerHTML += '<button id="btn" onclick="switchTab("tab1")">Click Me</button><div id="tab1">This is my DIV element.</div>';
+    });
+    it('should make tab1 not display', function(){
+
+        switchTab('tab1');
+
+        const greeting = document.querySelector('#tab1');
+        assert.equal(
+            document.getElementById('tab1').style.display, 
+            'none'
+        );
+        
     });
 });
 
-describe('greet()', function(){
-    beforeEach(function(){
-        document.querySelector('body').innerHTML += '<h1 class="greeting"></h1>';
+describe('switchBackToTab()', function(){
+        beforeEach(function(){
+        document.querySelector('body').innerHTML += '<button id="btn" onclick="switchTab("tab1")">Click Me</button><div id="tab1">This is my DIV element.</div>';
     });
-    afterEach(function(){
-        const elem = document.querySelector('.greeting');
-        elem.parentNode.removeChild(elem);
+        afterEach(function(){
+        switchTab('tab1')
     });
-    it('should add "Hello world" to the page', function(){
-
-        greet();
-
-        const greeting = document.querySelector('.greeting');
-
-        expect( greeting.innerHTML ).to.be.equal( 'Hello world' );
+    it('should make tab1 display again', function(){
+        
+        switchTab('tab1')
+    
+        const greeting2 = document.querySelector('#tab1');
+        assert.equal(
+            document.getElementById('tab1').style.display, 
+            'block'
+        );
     });
 });
